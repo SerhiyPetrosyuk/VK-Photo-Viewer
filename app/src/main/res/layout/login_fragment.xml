@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_sing_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_sing_in"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textColor="#fff"/>
+
+    <LinearLayout
+        android:id="@+id/ll_sing_out_and_albums"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <Button
+            android:id="@+id/btn_sing_out"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_sing_out"
+            android:visibility="visible"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/btn_albums"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:text="@string/albums"
+            android:visibility="visible"
+            android:textColor="#fff"/>
+        </LinearLayout>
+</RelativeLayout>

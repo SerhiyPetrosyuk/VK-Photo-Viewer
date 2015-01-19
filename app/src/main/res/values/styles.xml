@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="photoGridView" parent="android:Widget.Holo.GridView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:horizontalSpacing">5dp</item>
+        <item name="android:verticalSpacing">5dp</item>
+    </style>
+
+    <style name="photoGridViewContainer" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/bg</item>
+    </style>
+
+    <style name="photoThumbnail" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="photoThumbnailProgressBar" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+</resources>

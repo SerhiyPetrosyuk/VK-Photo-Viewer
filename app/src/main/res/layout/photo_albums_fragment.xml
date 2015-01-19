@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/photoGridViewContainer">
+
+    <GridView
+        android:id="@+id/gv_photo_albums"
+        android:numColumns="3"
+        style="@style/photoGridView"></GridView>
+
+</RelativeLayout>
