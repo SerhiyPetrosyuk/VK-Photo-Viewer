@@ -1,0 +1,11 @@
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/classes/release
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/support-annotations-20.0.0-c8c228112cf68379868e32f14f5632672916fca7.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/okhttp-urlconnection-2.0.0-ccf58de113d84b7662514f94746c80d9d3026803.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/okio-1.0.1-1ab83a563c6e983923ce6572230dd43b2d47d097.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/internal_impl-20.0.0-32aa90f2580526f9fec0be55e1e6429972b6c607.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/retrofit-1.6.1-32f2cfff8953313319003a9f61828a15a27441ee.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/picasso-2.3.2-a9d940f44a09db5ee096149ad5c568d33f1f3dd2.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/gson-2.2.4-c1f1a1883073d52137a4e2e7544fcbde7bef6c89.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/classes-9d7f6ddcd4caf08e8a4589f420dd48c33bc590db.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/okhttp-2.0.0-788fd3eac14a3bdea8edc7525390d3add46e48b2.jar
+/home/android/AndroidStudioProjects/MLSDevVKPhotoViewer/app/build/intermediates/pre-dexed/release/classes-2294a4f781bf4aa49e56a53b781daf485bc2ae62.jar

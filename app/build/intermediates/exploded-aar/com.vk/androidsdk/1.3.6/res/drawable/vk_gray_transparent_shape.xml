@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/vk_black_pressed"/>
+</shape><!-- From: file:/Users/romantruba/Documents/projects/vk-android-sdk/vksdk_library/src/main/res/drawable/vk_gray_transparent_shape.xml -->
