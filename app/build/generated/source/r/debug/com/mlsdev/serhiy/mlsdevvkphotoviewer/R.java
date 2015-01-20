@@ -11,15 +11,6 @@ public final class R {
     public static final class anim {
         public static final int from_left_to_right_set=0x7f040000;
         public static final int from_right_to_left_set=0x7f040001;
-        public static final int gone_from_center_to_left=0x7f040002;
-        public static final int gone_from_center_to_right=0x7f040003;
-        public static final int hide_element=0x7f040004;
-        public static final int long_from_left_to_center=0x7f040005;
-        public static final int long_from_right_to_left=0x7f040006;
-        public static final int short_from_left_to_right=0x7f040007;
-        public static final int short_from_left_to_right_album_btn=0x7f040008;
-        public static final int short_from_right_to_left=0x7f040009;
-        public static final int short_from_right_to_left_album_btn=0x7f04000a;
     }
     public static final class attr {
     }

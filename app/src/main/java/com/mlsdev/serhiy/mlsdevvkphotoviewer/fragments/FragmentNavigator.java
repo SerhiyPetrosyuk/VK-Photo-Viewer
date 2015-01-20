@@ -2,11 +2,8 @@ package com.mlsdev.serhiy.mlsdevvkphotoviewer.fragments;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
-import android.util.Log;
 
-import com.mlsdev.serhiy.mlsdevvkphotoviewer.Constants;
 import com.mlsdev.serhiy.mlsdevvkphotoviewer.R;
 
 /**
@@ -22,7 +19,6 @@ public class FragmentNavigator {
         int fragmentsCount = manager.getBackStackEntryCount();
 
         if (fragmentsCount > 0) {
-            Log.d(Constants.VK_LOG_TAG, "Fragments count: " + fragmentsCount);
 
             manager.popBackStack();
 
@@ -34,10 +30,6 @@ public class FragmentNavigator {
             } else if (fragmentsCount == 2) {
                 actionBar.setTitle(activity.getString(R.string.photo_albums));
             }
-
-//            int fragmentIndexInBackStack = manager.getBackStackEntryAt(fragmentsCount-2).getId();
-//            Fragment fragment = manager.findFragmentById(fragmentIndexInBackStack);
-//            manager.beginTransaction().show(fragment).commit();
 
             activity.invalidateOptionsMenu();
         }

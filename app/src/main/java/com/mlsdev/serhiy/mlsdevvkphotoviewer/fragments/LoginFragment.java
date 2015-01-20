@@ -50,8 +50,8 @@ public class LoginFragment extends Fragment {
         // Define VK sdk listener to make the initialization an authorization
         defineVkSdkListener();
 
-        VKSdk.initialize(mVkSdkListener, Constants.APP_ID,
-                VKAccessToken.tokenFromSharedPreferences(getActivity(), Constants.TOKEN_KEY));
+        VKSdk.initialize(mVkSdkListener, Constants.APP_ID, VKAccessToken.tokenFromSharedPreferences(getActivity(), VKAccessToken.ACCESS_TOKEN));
+        VKSdk.wakeUpSession(getActivity());
 
         /*
         * If a user has logged in we show him the fragment with two buttons, the first one іs
@@ -59,6 +59,8 @@ public class LoginFragment extends Fragment {
         * */
         if (VKSdk.isLoggedIn())
             openPhotoAlbumsFragment();
+        else 
+            showLogInButton();
 
         // Set retain instance to save fragment data when the is changed
         this.setRetainInstance(true);
@@ -81,8 +83,10 @@ public class LoginFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-            if (VKSdk.isLoggedIn())
+            if (VKSdk.isLoggedIn()) {
                 VKSdk.logout();
+                VKAccessToken.removeTokenAtKey(getActivity(), Constants.TOKEN_KEY);
+            }
 
             mSingInButton.setVisibility(View.VISIBLE);
             mSingOutAndAlbumsButtonsHolder.setVisibility(View.GONE);
@@ -109,8 +113,6 @@ public class LoginFragment extends Fragment {
                     .addToBackStack(PhotoAlbumsFragment.TAG)
                     .replace(R.id.main_activity_fragment_holder, new PhotoAlbumsFragment(), PhotoAlbumsFragment.TAG)
                     .commit();
-
-            Log.d(Constants.VK_LOG_TAG, "Go to " + PhotoAlbumsFragment.TAG);
         }
     }
 
@@ -126,8 +128,13 @@ public class LoginFragment extends Fragment {
             @Override
             public void onReceiveNewToken(VKAccessToken newToken) {
                 Log.d(VK_LOG_TAG, "onReceiveNewToken " + newToken);
-                newToken.saveTokenToSharedPreferences(getActivity(), Constants.TOKEN_KEY);
-                openPhotoAlbumsFragment();
+                
+                if (newToken != null) {
+                    newToken.saveTokenToSharedPreferences(getActivity(), Constants.TOKEN_KEY);
+                    openPhotoAlbumsFragment();
+                } else {
+                    mSingOutAndAlbumsButtonsHolder.setVisibility(View.GONE);
+                }
             }
 
             @Override
@@ -160,5 +167,12 @@ public class LoginFragment extends Fragment {
 
         mSingOutButton.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.from_left_to_right_set));
         mAlbumsButton.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.from_right_to_left_set));
+    }
+    
+    private void showLogInButton(){
+        
+        mSingInButton.setVisibility(View.VISIBLE);
+        mSingOutAndAlbumsButtonsHolder.setVisibility(View.GONE);
+        
     }
 }

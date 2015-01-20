@@ -41,8 +41,6 @@ public class PhotoAlbumsFragment extends Fragment {
 
         VKAccessToken accessToken = VKAccessToken.tokenFromSharedPreferences(getActivity(), Constants.TOKEN_KEY);
         String userId = accessToken.userId;
-        Log.d(Constants.VK_LOG_TAG, "user ID: " + userId);
-        Log.d(Constants.VK_LOG_TAG, "access token: " + accessToken.accessToken);
 
         View rootView = inflater.inflate(R.layout.photo_albums_fragment, container, false);
 
@@ -51,10 +49,7 @@ public class PhotoAlbumsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 VKApiPhotoAlbum photoAlbum = (VKApiPhotoAlbum) parent.getAdapter().getItem(position);
-
                 openPhotoAlbum(photoAlbum);
-
-                Log.d(Constants.VK_LOG_TAG, "Album title: " + photoAlbum.title + " ID: " + photoAlbum.getId());
             }
         });
         getPhotoAlbums(userId, rootView);
@@ -70,7 +65,6 @@ public class PhotoAlbumsFragment extends Fragment {
     private void getPhotoAlbums(String userId, View view){
         // The request to download photo albums
         VKRequest request = new VKRequest("photos.getAlbums", VKParameters.from(VKApiConst.OWNER_ID, userId, "need_covers", 1, "need_system", "wall"));
-        Log.d(Constants.VK_LOG_TAG, "URL: " + request.getPreparedRequest().getURI().toString());
 
         /*
         * The VKRequest is work in the own thread and handle the response in the CallBack,

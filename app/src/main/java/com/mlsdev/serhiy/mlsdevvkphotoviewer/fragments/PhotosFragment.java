@@ -31,7 +31,7 @@ public class PhotosFragment extends Fragment {
 
     private String mAlbumTitle = null;
     private Integer mAlbumId = null;
-    private GridView gridView,mPhotosGridView = null;
+    private GridView mPhotosGridView = null;
     private PhotoGridAdapter mPhotoGridAdapter = null;
 
     public PhotosFragment() {
@@ -96,7 +96,6 @@ public class PhotosFragment extends Fragment {
                         .addToBackStack(PhotoFragment.TAG)
                         .add(R.id.main_activity_fragment_holder, photoFragment, PhotosFragment.TAG)
                         .hide(PhotosFragment.this)
-//                        .replace(R.id.main_activity_fragment_holder, photoFragment)
                         .commit();
         }
     }
