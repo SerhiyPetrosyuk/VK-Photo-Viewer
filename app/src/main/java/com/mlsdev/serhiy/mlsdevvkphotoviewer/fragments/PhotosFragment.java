@@ -86,7 +86,7 @@ public class PhotosFragment extends Fragment {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             VKApiPhoto photo = (VKApiPhoto) parent.getAdapter().getItem(position);
             Bundle bundle = new Bundle();
-            bundle.putString(Constants.FULL_SCREEN_PHOTO, photo.photo_807);
+            bundle.putString(Constants.FULL_SCREEN_PHOTO, photo.photo_604);
 
             PhotoFragment photoFragment = new PhotoFragment();
             photoFragment.setArguments(bundle);
