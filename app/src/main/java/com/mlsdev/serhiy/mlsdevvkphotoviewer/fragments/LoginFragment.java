@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -156,5 +157,8 @@ public class LoginFragment extends Fragment {
     private void openPhotoAlbumsFragment(){
         mSingInButton.setVisibility(View.GONE);
         mSingOutAndAlbumsButtonsHolder.setVisibility(View.VISIBLE);
+
+        mSingOutButton.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.from_left_to_right_set));
+        mAlbumsButton.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.from_right_to_left_set));
     }
 }

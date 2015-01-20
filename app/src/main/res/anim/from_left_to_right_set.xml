@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="true">
+    
+    <translate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fromXDelta="-100%p"
+        android:fromYDelta="0"
+        android:toXDelta="1%p"
+        android:toYDelta="0"
+        android:duration="750">
+    </translate>
+
+    <translate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fromYDelta="0"
+        android:fromXDelta="1%p"
+        android:toYDelta="0"
+        android:toXDelta="-5%p"
+        android:startOffset="750"
+        android:duration="200">
+    </translate>
+
+    <translate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fromYDelta="0"
+        android:fromXDelta="-5%p"
+        android:toYDelta="0"
+        android:toXDelta="0%p"
+        android:startOffset="950"
+        android:duration="200">
+    </translate>
+</set>

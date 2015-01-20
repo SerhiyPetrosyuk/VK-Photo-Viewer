@@ -12,4 +12,5 @@ public class Constants {
     public static final String ALBUM_TITLE = "album.title";
     public static final String ALBUM_ID = "album.id";
     public static final String FULL_SCREEN_PHOTO = "full.screen.photo";
+    
 }
